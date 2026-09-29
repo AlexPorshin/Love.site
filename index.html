@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 месяца ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="screen active" id="screen1">
+        <h1>Привет, любимая ❤️</h1>
+        <p>У меня есть для тебя кое-что.<br>Но это не просто подарок.<br>Это маленькое путешествие.</p>
+        <button class="btn" onclick="goTo(2)">Начать</button>
+    </div>
+
+    <div class="screen" id="screen2">
+        <h1>Шаг 1</h1>
+        <p>За эти три месяца мы прошли через многое.<br>Собери 3 сердечка, чтобы продолжить.</p>
+        <div id="hearts-container"></div>
+        <p id="hearts-status" class="status-text">Собрано: 0 / 3</p>
+    </div>
+
+    <div class="screen" id="screen3">
+        <h1>Шаг 2</h1>
+        <p>Помнишь, как мы смеялись над словом Бахила?<br>Давай поиграем. Лови сердечки курсором.</p>
+        <div id="game-area"></div>
+        <div id="game-score" class="status-text">Поймано: 0 / 10</div>
+    </div>
+
+    <div class="screen" id="screen4">
+        <h1>Шаг 3</h1>
+        <p>А теперь вопрос.<br>Что ты чувствуешь, когда мы вместе?</p>
+        <button class="choice-btn" onclick="answerChoice('Тепло')">Тепло</button>
+        <button class="choice-btn" onclick="answerChoice('Спокойствие')">Спокойствие</button>
+        <button class="choice-btn" onclick="answerChoice('Счастье')">Счастье</button>
+        <p id="choice-answer" class="answer-text"></p>
+    </div>
+
+    <div class="screen" id="screen5">
+        <h1>Шаг 4</h1>
+        <p>Помнишь, мы учим итальянский?<br>Напиши что-нибудь на итальянском, что ты уже знаешь.</p>
+        <input type="text" id="italian-input" placeholder="Например: Ti amo">
+        <button class="btn" onclick="checkItalian()">Отправить</button>
+        <p id="italian-answer" class="answer-text"></p>
+    </div>
+
+    <div class="screen" id="screen6">
+        <h1>С 3 месяцами, любимая ❤️</h1>
+        <p class="final-text">
+            Юль, я не знаю, что будет завтра.<br>
+            Но я знаю, что хочу быть с тобой.<br>
+            Пройти с тобой через всё. Через усталость, через расстояние, через недопонимания, через смех и радость.<br>
+            Я выбираю тебя. Каждый день.<br>
+            Это только начало. Я тебя люблю.
+        </p>
+        <div id="timer">
+            <div class="timer-block"><div class="timer-num" id="days">0</div><div class="timer-label">дней</div></div>
+            <div class="timer-block"><div class="timer-num" id="hours">0</div><div class="timer-label">часов</div></div>
+            <div class="timer-block"><div class="timer-num" id="minutes">0</div><div class="timer-label">минут</div></div>
+            <div class="timer-block"><div class="timer-num" id="seconds">0</div><div class="timer-label">секунд</div></div>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="BUSHIDO_ZHO_-_Gde_by_ya_ni_byl_80238688.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-btn" class="music-btn" onclick="toggleMusic()" title="Включить музыку">🎵</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
